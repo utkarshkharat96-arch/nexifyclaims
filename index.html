@@ -138,18 +138,13 @@ document.getElementById("claimForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      name: this.name.value,
-      phone: this.phone.value,
-      email: this.email.value,
-      claim: this.claim.value,
-      description: this.description.value
-    })
+  method: "POST",
+  body: JSON.stringify({
+    name: this.name.value,
+    phone: this.phone.value,
+    email: this.email.value,
+    claim: this.claim.value,
+    description: this.description.value
   })
-  .then(() => {
-    this.reset();
-    document.getElementById("successMsg").style.display = "block";
-  });
-});
-</script>
+})
+
