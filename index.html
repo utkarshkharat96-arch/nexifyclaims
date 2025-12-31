@@ -97,23 +97,59 @@
     mass tort cases. Free & confidential claim review with no obligation.
   </p>
   <a href="#apply">Apply for a Claim</a>
-</section>
-
 <section class="form-section" id="apply">
-  <h2 style="text-align:center;color:#1e40af;">Apply for a Claim</h2>
+  <h3>Apply for a Claim</h3>
 
-  <!-- https://tally.so/r/ja6bjJ -->
-  <iframe src="PASTE_TALLY_EMBED_LINK_HERE"></iframe>
+  <form id="claimForm">
+    <label>Full Name</label>
+    <input type="text" name="name" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>Email Address</label>
+    <input type="email" name="email" required>
+
+    <label>Type of Claim</label>
+    <select name="claim" required>
+      <option value="">Select a claim</option>
+      <option>AFFF Firefighting Foam</option>
+      <option>Camp Lejeune</option>
+      <option>Hair Relaxer</option>
+      <option>NEC Infant Formula</option>
+      <option>Roundup</option>
+      <option>Talcum Powder</option>
+      <option>Zantac</option>
+    </select>
+
+    <label>Brief Description</label>
+    <textarea name="description"></textarea>
+
+    <button type="submit">Submit Claim for Review</button>
+  </form>
+
+  <p id="successMsg" style="display:none;color:green;text-align:center;">
+    ✅ Thank you! Your claim has been submitted.
+  </p>
 </section>
 
-<footer>
-  <p>
-    Nexify Claims is not a law firm and does not provide legal advice.
-    We connect individuals with legal professionals for potential claims.
-    Results may vary.
-  </p>
-  <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
-</footer>
+<script>
+document.getElementById("claimForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-</body>
-</html>
+  fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      name: this.name.value,
+      phone: this.phone.value,
+      email: this.email.value,
+      claim: this.claim.value,
+      description: this.description.value
+    })
+  })
+  .then(() => {
+    this.reset();
+    document.getElementById("successMsg").style.display = "block";
+  });
+});
+</script>
