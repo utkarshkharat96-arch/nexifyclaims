@@ -187,6 +187,16 @@ header nav a{
   margin-bottom:20px;
 }
 
+/* DISCLAIMER */
+.legal-disclaimer{
+  max-width:900px;
+  margin:70px auto 40px;
+  padding:0 20px;
+  font-size:12px;
+  color:#4b5563;
+  line-height:1.6;
+}
+
 /* FOOTER */
 footer{
   background:#0b1c2d;
@@ -218,7 +228,6 @@ footer{
   <a href="#apply">Apply for a Claim</a>
 </section>
 
-<!-- VISIBLE LEGAL IMAGES -->
 <div class="image-strip">
   <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246">
   <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab">
@@ -254,6 +263,7 @@ footer{
   <h3>Apply for a Claim</h3>
 
   <form action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec" method="POST" target="_blank">
+
     <div class="form-group">
       <label>Full Name</label>
       <input type="text" name="name" required>
@@ -297,14 +307,35 @@ footer{
     </div>
 
     <button class="submit-btn" type="submit">Submit Claim for Review</button>
+
+    <p style="font-size:11px;color:#6b7280;margin-top:12px;">
+      This site is an advertising service and does not provide legal advice.
+      Submission does not create an attorney-client relationship.
+    </p>
+
   </form>
 </section>
 
-<footer>
+<section class="legal-disclaimer">
   <p>
     Nexify Claims is not a law firm and does not provide legal advice.
-    We connect individuals with legal professionals.
+    We are an advertising and lead generation service that connects individuals
+    seeking legal assistance with independent attorneys and law firms.
   </p>
+  <p>
+    Submission of information does not create an attorney-client relationship.
+    Past results do not guarantee similar outcomes. Compensation, if any,
+    depends on the specific facts and circumstances of each case.
+  </p>
+  <p>
+    By submitting this form, you agree to be contacted by Nexify Claims and/or
+    participating law firms or their representatives by phone, email, or text
+    message, including automated means, even if you are on a Do Not Call list.
+    Consent is not required as a condition of services.
+  </p>
+</section>
+
+<footer>
   <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
 
