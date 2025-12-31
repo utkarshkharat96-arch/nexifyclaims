@@ -1,183 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Nexify Claims | Mass Tort Claim Assistance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Nexify Claims | Mass Tort Claim Assistance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+*{box-sizing:border-box}
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f4f6f8;
-      color: #1f2937;
-    }
+body{
+  margin:0;
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:#f6f7fb;
+  color:#1f2937;
+}
 
-    /* HEADER */
-    header {
-      background: rgba(15,23,42,0.95);
-      color: #fff;
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+/* HEADER */
+header{
+  background:#0b1c2d;
+  color:#fff;
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
+header h1{
+  margin:0;
+  font-size:22px;
+  color:#facc15;
+}
 
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+header nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+}
 
-    /* HERO WITH IMAGE */
-    .hero {
-      background:
-        linear-gradient(rgba(30,64,175,0.85), rgba(37,99,235,0.85)),
-        url("https://images.unsplash.com/photo-1528740561666-dc2479dc08ab");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px;
-    }
+/* HERO */
+.hero{
+  background:
+    linear-gradient(120deg, rgba(11,28,45,.85), rgba(30,64,175,.75)),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:130px 20px;
+}
 
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
+.hero h2{
+  font-size:44px;
+  margin-bottom:18px;
+}
 
-    .hero p {
-      font-size: 18px;
-      max-width: 760px;
-      margin: 0 auto 30px;
-      line-height: 1.6;
-    }
+.hero p{
+  font-size:18px;
+  max-width:760px;
+  margin:0 auto 30px;
+  line-height:1.6;
+}
 
-    .hero a {
-      background: #fff;
-      color: #1e40af;
-      padding: 14px 32px;
-      font-size: 16px;
-      font-weight: 600;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-    }
+.hero a{
+  background:#facc15;
+  color:#0b1c2d;
+  padding:14px 34px;
+  font-size:16px;
+  font-weight:700;
+  border-radius:6px;
+  text-decoration:none;
+}
 
-    /* SECTION */
-    .section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+/* IMAGE STRIP */
+.image-strip{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:-60px auto 80px;
+  padding:0 20px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-top: 40px;
-    }
+.image-strip img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
 
-    .card {
-      background: #fff;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      text-align: left;
-      transition: transform 0.2s;
-    }
+/* SECTIONS */
+.section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 20px;
+  text-align:center;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+  margin-top:40px;
+}
 
-    .card h4 {
-      margin-top: 0;
-      color: #1e40af;
-    }
+.card{
+  background:#fff;
+  padding:28px;
+  border-radius:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  text-align:left;
+}
 
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #1e40af;
-      font-weight: 600;
-      text-decoration: none;
-    }
+.card h4{
+  margin-top:0;
+  color:#1e3a8a;
+}
 
-    /* FORM */
-    .form-section {
-      max-width: 720px;
-      margin: 90px auto;
-      background: #fff;
-      padding: 45px;
-      border-radius: 12px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-    }
+.card a{
+  display:inline-block;
+  margin-top:10px;
+  color:#1e3a8a;
+  font-weight:600;
+  text-decoration:none;
+}
 
-    .form-section h3 {
-      text-align: center;
-      color: #1e40af;
-      margin-bottom: 30px;
-    }
+/* FORM */
+.form-section{
+  max-width:720px;
+  margin:90px auto;
+  background:#fff;
+  padding:45px;
+  border-radius:12px;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
 
-    .form-group {
-      margin-bottom: 18px;
-    }
+.form-section h3{
+  text-align:center;
+  color:#1e3a8a;
+  margin-bottom:30px;
+}
 
-    .form-group label {
-      display: block;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
+.form-group{
+  margin-bottom:18px;
+}
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #cbd5e1;
-      font-size: 14px;
-    }
+.form-group label{
+  display:block;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:6px;
+}
 
-    .consent {
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:12px;
+  border-radius:6px;
+  border:1px solid #cbd5e1;
+  font-size:14px;
+}
 
-    .submit-btn {
-      width: 100%;
-      background: #1e40af;
-      color: #fff;
-      padding: 15px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
+.submit-btn{
+  width:100%;
+  background:#1e3a8a;
+  color:#fff;
+  padding:15px;
+  font-size:16px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:700;
+}
 
-    footer {
-      background: #0f172a;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 35px 20px;
-      font-size: 13px;
-    }
-  </style>
+.submit-btn:hover{
+  background:#0b1c2d;
+}
+
+.consent{
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#0b1c2d;
+  color:#cbd5f5;
+  text-align:center;
+  padding:35px 20px;
+  font-size:13px;
+}
+</style>
 </head>
 
 <body>
@@ -200,24 +218,35 @@
   <a href="#apply">Apply for a Claim</a>
 </section>
 
+<!-- VISIBLE LEGAL IMAGES -->
+<div class="image-strip">
+  <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246">
+  <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab">
+  <img src="https://images.unsplash.com/photo-1603575448360-153f093fd0b2">
+</div>
+
+<section class="section">
+  <h3>Why Choose Nexify Claims?</h3>
+  <div class="cards">
+    <div class="card"><h4>Free Case Review</h4><p>No cost, no obligation.</p></div>
+    <div class="card"><h4>Confidential & Secure</h4><p>Your information is protected.</p></div>
+    <div class="card"><h4>Legal Connections</h4><p>We connect you with legal professionals.</p></div>
+  </div>
+</section>
+
 <section class="section" id="cases">
   <h3>Active Mass Tort Cases</h3>
-  <p style="max-width:820px;margin:0 auto 40px;">
-    If you or a loved one were harmed due to negligence or unsafe products,
-    you may qualify for compensation through one of the cases below.
-  </p>
-
   <div class="cards">
-    <div class="card"><h4>Camp Lejeune Water Contamination</h4><p>Exposure to contaminated water between 1953–1987.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>AFFF Firefighting Foam</h4><p>PFAS exposure linked to cancer and serious illnesses.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Roundup Herbicide</h4><p>Non-Hodgkin’s lymphoma and glyphosate exposure claims.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Talcum Powder</h4><p>Ovarian cancer and mesothelioma lawsuits.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Zantac (Ranitidine)</h4><p>NDMA contamination and cancer risk.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Hair Relaxer Lawsuit</h4><p>Uterine cancer and chemical exposure claims.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>NEC Infant Formula</h4><p>Premature infants diagnosed with NEC.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Paraquat Parkinson’s</h4><p>Herbicide exposure linked to Parkinson’s disease.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Roblox Child Safety</h4><p>Child exploitation and platform negligence claims.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Rideshare Assault</h4><p>Uber & Lyft passenger safety lawsuits.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Camp Lejeune</h4><p>Contaminated water exposure claims.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>AFFF Firefighting Foam</h4><p>PFAS exposure linked to cancer.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Roundup</h4><p>Glyphosate cancer lawsuits.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Talcum Powder</h4><p>Ovarian cancer claims.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Zantac</h4><p>NDMA contamination lawsuits.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Hair Relaxer</h4><p>Uterine cancer claims.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>NEC Infant Formula</h4><p>Premature infant injuries.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Paraquat</h4><p>Parkinson’s disease claims.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Roblox Lawsuit</h4><p>Child safety & exploitation claims.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Rideshare Assault</h4><p>Uber & Lyft safety lawsuits.</p><a href="#apply">Apply Now →</a></div>
   </div>
 </section>
 
@@ -225,7 +254,6 @@
   <h3>Apply for a Claim</h3>
 
   <form action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec" method="POST" target="_blank">
-
     <div class="form-group">
       <label>Full Name</label>
       <input type="text" name="name" required>
@@ -252,9 +280,9 @@
         <option>Zantac</option>
         <option>Hair Relaxer</option>
         <option>NEC Infant Formula</option>
-        <option>Paraquat Parkinson’s</option>
-        <option>Roblox Lawsuit</option>
-        <option>Rideshare Lawsuit</option>
+        <option>Paraquat</option>
+        <option>Roblox</option>
+        <option>Rideshare</option>
       </select>
     </div>
 
@@ -265,20 +293,17 @@
 
     <div class="consent">
       <input type="checkbox" required>
-      I agree to be contacted regarding my claim. Consent is not a condition of purchase.
+      I agree to be contacted regarding my claim.
     </div>
 
-    <button type="submit" class="submit-btn">
-      Submit Claim for Review
-    </button>
+    <button class="submit-btn" type="submit">Submit Claim for Review</button>
   </form>
 </section>
 
 <footer>
   <p>
     Nexify Claims is not a law firm and does not provide legal advice.
-    We connect individuals with legal professionals for potential claims.
-    Results may vary.
+    We connect individuals with legal professionals.
   </p>
   <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
