@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Nexify Claims | Mass Tort Claim Assistance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     * { box-sizing: border-box; }
@@ -75,7 +75,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       margin-top: 40px;
     }
@@ -85,11 +85,20 @@
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      text-align: left;
     }
 
     .card h4 {
       margin-top: 0;
       color: #1e40af;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e40af;
+      font-weight: 600;
+      text-decoration: none;
     }
 
     /* FORM */
@@ -129,6 +138,11 @@
       font-size: 14px;
     }
 
+    .consent {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
     .submit-btn {
       width: 100%;
       background: #1e40af;
@@ -143,11 +157,6 @@
 
     .submit-btn:hover {
       background: #1d4ed8;
-    }
-
-    .consent {
-      font-size: 12px;
-      margin-bottom: 20px;
     }
 
     footer {
@@ -166,6 +175,7 @@
   <h1>Nexify Claims</h1>
   <nav>
     <a href="#">Home</a>
+    <a href="#cases">Cases</a>
     <a href="#apply">Apply</a>
   </nav>
 </header>
@@ -197,6 +207,53 @@
   </div>
 </section>
 
+<!-- ACTIVE CASES -->
+<section class="section" id="cases">
+  <h3>Active Mass Tort Cases</h3>
+  <p style="max-width:800px;margin:0 auto 40px;">
+    You may qualify for compensation if you were affected by any of the cases below.
+    Submit a free and confidential claim review.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Camp Lejeune Water Contamination</h4>
+      <p>Exposure to contaminated water at Camp Lejeune between 1953–1987.</p>
+      <a href="#apply">Apply Now →</a>
+    </div>
+
+    <div class="card">
+      <h4>AFFF Firefighting Foam</h4>
+      <p>PFAS exposure linked to cancer and serious health conditions.</p>
+      <a href="#apply">Apply Now →</a>
+    </div>
+
+    <div class="card">
+      <h4>Roundup Herbicide</h4>
+      <p>Claims involving non-Hodgkin’s lymphoma linked to glyphosate.</p>
+      <a href="#apply">Apply Now →</a>
+    </div>
+
+    <div class="card">
+      <h4>Talcum Powder</h4>
+      <p>Ovarian cancer and mesothelioma claims related to talc products.</p>
+      <a href="#apply">Apply Now →</a>
+    </div>
+
+    <div class="card">
+      <h4>Zantac (Ranitidine)</h4>
+      <p>NDMA contamination and increased cancer risk claims.</p>
+      <a href="#apply">Apply Now →</a>
+    </div>
+
+    <div class="card">
+      <h4>Hair Relaxer Products</h4>
+      <p>Claims involving uterine cancer and chemical hair relaxers.</p>
+      <a href="#apply">Apply Now →</a>
+    </div>
+  </div>
+</section>
+
 <!-- APPLY FORM -->
 <section class="form-section" id="apply">
   <h3>Apply for a Claim</h3>
@@ -222,13 +279,12 @@
       <label>Type of Claim</label>
       <select name="claim" required>
         <option value="">Select a claim</option>
-        <option>AFFF Firefighting Foam</option>
         <option>Camp Lejeune</option>
-        <option>Hair Relaxer</option>
-        <option>NEC Infant Formula</option>
+        <option>AFFF Firefighting Foam</option>
         <option>Roundup</option>
         <option>Talcum Powder</option>
         <option>Zantac</option>
+        <option>Hair Relaxer</option>
       </select>
     </div>
 
@@ -245,7 +301,6 @@
     <button type="submit" class="submit-btn">
       Submit Claim for Review
     </button>
-
   </form>
 </section>
 
