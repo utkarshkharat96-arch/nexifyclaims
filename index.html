@@ -122,7 +122,19 @@
       Nexify Claims helps individuals explore potential compensation related to
       mass tort cases. Free, confidential claim review with no obligation.
     </p>
-    <button>Apply for a Claim</button>
+    <button><a href="#apply" style="
+  background:#ffffff;
+  color:#1e40af;
+  padding:14px 30px;
+  font-size:16px;
+  font-weight:600;
+  border-radius:6px;
+  text-decoration:none;
+  display:inline-block;
+">
+  Apply for a Claim
+</a>
+</button>
   </section>
 
   <section class="section">
@@ -153,7 +165,65 @@
       Results may vary.
     </p>
     <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
-  </footer>
+ <section id="apply" style="
+  max-width:700px;
+  margin:80px auto;
+  background:#ffffff;
+  padding:40px;
+  border-radius:8px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+">
+  <h2 style="text-align:center;color:#1e40af;margin-bottom:20px;">
+    Apply for a Claim
+  </h2>
+
+  <form action="#" method="post">
+    
+    <label>Full Name</label>
+    <input type="text" required style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <label>Phone Number</label>
+    <input type="tel" required style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <label>Email Address</label>
+    <input type="email" required style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <label>Type of Claim</label>
+    <select required style="width:100%;padding:12px;margin-bottom:15px;">
+      <option value="">Select a claim</option>
+      <option>AFFF Firefighting Foam</option>
+      <option>Camp Lejeune</option>
+      <option>Hair Relaxer</option>
+      <option>NEC Infant Formula</option>
+      <option>Roundup</option>
+      <option>Talcum Powder</option>
+      <option>Zantac</option>
+    </select>
+
+    <label>Brief Description</label>
+    <textarea rows="4" style="width:100%;padding:12px;margin-bottom:20px;"></textarea>
+
+    <label style="font-size:13px;display:block;margin-bottom:20px;">
+      <input type="checkbox" required>
+      I agree to be contacted regarding my claim. Consent is not a condition of purchase.
+    </label>
+
+    <button type="submit" style="
+      width:100%;
+      background:#1e40af;
+      color:#ffffff;
+      padding:14px;
+      font-size:16px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+    ">
+      Submit Claim for Review
+    </button>
+
+  </form>
+</section>
+ </footer>
 
 </body>
 </html>
