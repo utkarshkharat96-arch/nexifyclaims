@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Nexify Claims | Mass Tort Claim Assistance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -17,10 +15,9 @@
       color: #1f2937;
     }
 
-    /* HEADER */
     header {
       background: #0f172a;
-      color: #ffffff;
+      color: #fff;
       padding: 18px 40px;
       display: flex;
       justify-content: space-between;
@@ -30,20 +27,18 @@
     header h1 {
       margin: 0;
       font-size: 22px;
-      font-weight: 600;
     }
 
     header nav a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       margin-left: 20px;
       font-size: 14px;
     }
 
-    /* HERO */
     .hero {
       background: linear-gradient(135deg, #1e40af, #2563eb);
-      color: #ffffff;
+      color: #fff;
       text-align: center;
       padding: 90px 20px;
     }
@@ -61,7 +56,7 @@
     }
 
     .hero a {
-      background: #ffffff;
+      background: #fff;
       color: #1e40af;
       padding: 14px 30px;
       font-size: 16px;
@@ -71,7 +66,6 @@
       display: inline-block;
     }
 
-    /* SECTION */
     .section {
       max-width: 1100px;
       margin: 70px auto;
@@ -87,7 +81,7 @@
     }
 
     .card {
-      background: #ffffff;
+      background: #fff;
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
@@ -102,7 +96,7 @@
     .form-section {
       max-width: 720px;
       margin: 80px auto;
-      background: #ffffff;
+      background: #fff;
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 15px 30px rgba(0,0,0,0.12);
@@ -135,22 +129,10 @@
       font-size: 14px;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #2563eb;
-    }
-
-    .consent {
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
-
     .submit-btn {
       width: 100%;
       background: #1e40af;
-      color: #ffffff;
+      color: #fff;
       padding: 14px;
       font-size: 16px;
       border: none;
@@ -163,15 +145,11 @@
       background: #1d4ed8;
     }
 
-    .success-msg {
-      display: none;
-      margin-top: 20px;
-      text-align: center;
-      color: green;
-      font-weight: 600;
+    .consent {
+      font-size: 12px;
+      margin-bottom: 20px;
     }
 
-    /* FOOTER */
     footer {
       background: #0f172a;
       color: #cbd5f5;
@@ -203,18 +181,15 @@
 
 <section class="section">
   <h3>Why Choose Nexify Claims?</h3>
-
   <div class="cards">
     <div class="card">
       <h4>Free Case Review</h4>
       <p>No cost, no obligation.</p>
     </div>
-
     <div class="card">
       <h4>Confidential & Secure</h4>
       <p>Your information is protected.</p>
     </div>
-
     <div class="card">
       <h4>Legal Connections</h4>
       <p>We connect you with legal professionals.</p>
@@ -226,11 +201,11 @@
 <section class="form-section" id="apply">
   <h3>Apply for a Claim</h3>
 
-  <form 
-  action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec" 
-  method="POST"
-  target="_blank"
->
+  <form
+    action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec"
+    method="POST"
+    target="_blank"
+  >
 
     <div class="form-group">
       <label>Full Name</label>
@@ -274,11 +249,8 @@
     <button type="submit" class="submit-btn">
       Submit Claim for Review
     </button>
-  </form>
 
-  <p id="successMsg" class="success-msg">
-    ✅ Thank you! Your claim has been submitted successfully.
-  </p>
+  </form>
 </section>
 
 <footer>
@@ -289,30 +261,6 @@
   </p>
   <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
-
-<script>
-document.getElementById("claimForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      name: this.name.value,
-      phone: this.phone.value,
-      email: this.email.value,
-      claim: this.claim.value,
-      description: this.description.value
-    })
-  })
-  .then(() => {
-    this.reset();
-    document.getElementById("successMsg").style.display = "block";
-  })
-  .catch(() => {
-    alert("Something went wrong. Please try again.");
-  });
-});
-</script>
 
 </body>
 </html>
