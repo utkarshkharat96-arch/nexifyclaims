@@ -15,7 +15,6 @@ body{
   color:#1f2937;
 }
 
-/* HEADER */
 header{
   background:#0b1c2d;
   color:#fff;
@@ -41,7 +40,6 @@ header nav a{
   font-size:14px;
 }
 
-/* HERO */
 .hero{
   background:
     linear-gradient(120deg, rgba(11,28,45,.85), rgba(30,64,175,.75)),
@@ -75,7 +73,6 @@ header nav a{
   text-decoration:none;
 }
 
-/* IMAGE STRIP */
 .image-strip{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -93,7 +90,6 @@ header nav a{
   box-shadow:0 12px 25px rgba(0,0,0,.15);
 }
 
-/* SECTIONS */
 .section{
   max-width:1100px;
   margin:80px auto;
@@ -129,7 +125,6 @@ header nav a{
   text-decoration:none;
 }
 
-/* FORM */
 .form-section{
   max-width:720px;
   margin:90px auto;
@@ -187,23 +182,28 @@ header nav a{
   margin-bottom:20px;
 }
 
-/* DISCLAIMER */
-.legal-disclaimer{
+.legal-text{
   max-width:900px;
-  margin:70px auto 40px;
+  margin:70px auto;
   padding:0 20px;
   font-size:12px;
   color:#4b5563;
   line-height:1.6;
+  text-align:left;
 }
 
-/* FOOTER */
 footer{
   background:#0b1c2d;
   color:#cbd5f5;
   text-align:center;
   padding:35px 20px;
   font-size:13px;
+}
+
+footer a{
+  color:#facc15;
+  text-decoration:none;
+  margin:0 8px;
 }
 </style>
 </head>
@@ -216,6 +216,8 @@ footer{
     <a href="#">Home</a>
     <a href="#cases">Cases</a>
     <a href="#apply">Apply</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#terms">Terms</a>
   </nav>
 </header>
 
@@ -234,15 +236,6 @@ footer{
   <img src="https://images.unsplash.com/photo-1603575448360-153f093fd0b2">
 </div>
 
-<section class="section">
-  <h3>Why Choose Nexify Claims?</h3>
-  <div class="cards">
-    <div class="card"><h4>Free Case Review</h4><p>No cost, no obligation.</p></div>
-    <div class="card"><h4>Confidential & Secure</h4><p>Your information is protected.</p></div>
-    <div class="card"><h4>Legal Connections</h4><p>We connect you with legal professionals.</p></div>
-  </div>
-</section>
-
 <section class="section" id="cases">
   <h3>Active Mass Tort Cases</h3>
   <div class="cards">
@@ -254,8 +247,8 @@ footer{
     <div class="card"><h4>Hair Relaxer</h4><p>Uterine cancer claims.</p><a href="#apply">Apply Now →</a></div>
     <div class="card"><h4>NEC Infant Formula</h4><p>Premature infant injuries.</p><a href="#apply">Apply Now →</a></div>
     <div class="card"><h4>Paraquat</h4><p>Parkinson’s disease claims.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Roblox Lawsuit</h4><p>Child safety & exploitation claims.</p><a href="#apply">Apply Now →</a></div>
-    <div class="card"><h4>Rideshare Assault</h4><p>Uber & Lyft safety lawsuits.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Roblox</h4><p>Child safety lawsuits.</p><a href="#apply">Apply Now →</a></div>
+    <div class="card"><h4>Rideshare Assault</h4><p>Uber & Lyft safety claims.</p><a href="#apply">Apply Now →</a></div>
   </div>
 </section>
 
@@ -307,36 +300,43 @@ footer{
     </div>
 
     <button class="submit-btn" type="submit">Submit Claim for Review</button>
-
-    <p style="font-size:11px;color:#6b7280;margin-top:12px;">
-      This site is an advertising service and does not provide legal advice.
-      Submission does not create an attorney-client relationship.
-    </p>
-
   </form>
 </section>
 
-<section class="legal-disclaimer">
+<!-- PRIVACY POLICY -->
+<section class="legal-text" id="privacy">
+  <h3>Privacy Policy</h3>
+  <p>
+    Nexify Claims respects your privacy. Information submitted through this
+    website is used solely to evaluate potential legal claims and to connect
+    individuals with independent attorneys or law firms.
+  </p>
+  <p>
+    We do not sell personal information. Data may be shared with participating
+    legal partners for the purpose of claim evaluation. By using this site,
+    you consent to our collection and use of information as described.
+  </p>
+</section>
+
+<!-- TERMS -->
+<section class="legal-text" id="terms">
+  <h3>Terms & Conditions</h3>
   <p>
     Nexify Claims is not a law firm and does not provide legal advice.
-    We are an advertising and lead generation service that connects individuals
-    seeking legal assistance with independent attorneys and law firms.
+    Use of this website does not create an attorney-client relationship.
   </p>
   <p>
-    Submission of information does not create an attorney-client relationship.
-    Past results do not guarantee similar outcomes. Compensation, if any,
-    depends on the specific facts and circumstances of each case.
-  </p>
-  <p>
-    By submitting this form, you agree to be contacted by Nexify Claims and/or
-    participating law firms or their representatives by phone, email, or text
-    message, including automated means, even if you are on a Do Not Call list.
-    Consent is not required as a condition of services.
+    All content is provided for informational purposes only. Submission of
+    information does not guarantee compensation or legal representation.
   </p>
 </section>
 
 <footer>
-  <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
+  <p>
+    © 2026 Nexify Business Solutions. All rights reserved.
+    | <a href="#privacy">Privacy Policy</a>
+    | <a href="#terms">Terms & Conditions</a>
+  </p>
 </footer>
 
 </body>
