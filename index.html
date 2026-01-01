@@ -5,7 +5,7 @@
   <title>Nexify Claims – Free Case Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- TrustedForm SCRIPT (MUST BE IN HEAD) -->
+  <!-- TrustedForm SCRIPT (DO NOT MOVE) -->
   <script type="text/javascript">
     (function() {
       var tf = document.createElement('script');
@@ -21,28 +21,67 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f7fa;
+      background: #f4f6f9;
       color: #222;
     }
 
     header {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      padding: 60px 20px;
+      color: white;
+      padding: 90px 20px;
       text-align: center;
     }
 
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: white;
+      color: #1e3c72;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
     section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
       border-radius: 8px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
-    h1, h2 {
+    .card h3 {
       margin-top: 0;
+      color: #1e3c72;
+    }
+
+    .form-box {
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
     }
 
     label {
@@ -61,77 +100,105 @@
     }
 
     button {
-      margin-top: 20px;
+      margin-top: 25px;
       background: #1e3c72;
       color: #fff;
       padding: 14px;
       border: none;
       width: 100%;
       font-size: 16px;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
-    }
-
-    button:hover {
-      background: #16325c;
     }
 
     footer {
       text-align: center;
       font-size: 12px;
       color: #666;
-      margin: 40px 10px;
+      margin: 50px 15px;
     }
   </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <header>
   <h1>You May Be Eligible for Financial Compensation</h1>
   <p>Free & confidential mass tort claim review. No obligation.</p>
+  <a href="#claim-form" class="cta-btn">Check Eligibility</a>
 </header>
 
+<!-- WHY US -->
 <section>
-  <h2>Apply for a Claim</h2>
+  <h2>Why Choose Nexify Claims?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Free Case Review</h3>
+      <p>No cost, no obligation.</p>
+    </div>
+    <div class="card">
+      <h3>Confidential & Secure</h3>
+      <p>Your information is protected.</p>
+    </div>
+    <div class="card">
+      <h3>Legal Connections</h3>
+      <p>We connect you with legal professionals.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- FORM -->
-  <form 
-    action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec" 
-    method="POST"
-  >
+<!-- ACTIVE CASES -->
+<section>
+  <h2>Active Mass Tort Lawsuits</h2>
+  <div class="cards">
+    <div class="card">Camp Lejeune</div>
+    <div class="card">AFFF Firefighting Foam</div>
+    <div class="card">Roundup</div>
+    <div class="card">Roblox Lawsuit</div>
+    <div class="card">Rideshare Lawsuit</div>
+  </div>
+</section>
 
-    <!-- REQUIRED FOR TRUSTEDFORM -->
-    <input type="hidden" name="trustedform_cert_url">
+<!-- FORM -->
+<section id="claim-form">
+  <div class="form-box">
+    <h2>Apply for a Claim</h2>
 
-    <label>Full Name</label>
-    <input type="text" name="name" required>
+    <form action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec" method="POST">
 
-    <label>Phone Number</label>
-    <input type="tel" name="phone" required>
+      <!-- REQUIRED FOR TRUSTEDFORM -->
+      <input type="hidden" name="trustedform_cert_url">
 
-    <label>Email Address</label>
-    <input type="email" name="email" required>
+      <label>Full Name</label>
+      <input type="text" name="name" required>
 
-    <label>Type of Claim</label>
-    <select name="claim" required>
-      <option value="">Select a claim</option>
-      <option value="Camp Lejeune">Camp Lejeune</option>
-      <option value="AFFF">AFFF Firefighting Foam</option>
-      <option value="Roundup">Roundup</option>
-      <option value="Roblox">Roblox Lawsuit</option>
-      <option value="Rideshare">Rideshare Lawsuit</option>
-    </select>
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required>
 
-    <label>Additional Details</label>
-    <textarea name="message" rows="4"></textarea>
+      <label>Email Address</label>
+      <input type="email" name="email" required>
 
-    <button type="submit">Submit Claim for Review</button>
-  </form>
+      <label>Type of Claim</label>
+      <select name="claim" required>
+        <option value="">Select a claim</option>
+        <option>Camp Lejeune</option>
+        <option>AFFF</option>
+        <option>Roundup</option>
+        <option>Roblox</option>
+        <option>Rideshare</option>
+      </select>
+
+      <label>Additional Details</label>
+      <textarea name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Claim for Review</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-  Nexify Claims is not a law firm and does not provide legal advice.  
+  Nexify Claims is not a law firm and does not provide legal advice.<br>
   Submission does not create an attorney-client relationship.
 </footer>
 
