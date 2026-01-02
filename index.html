@@ -8,7 +8,7 @@
 <!-- TRUSTEDFORM SCRIPT -->
 <script>
 (function() {
-  var tf = document.createElement('script');
+  var tf = document.createElement("script");
   tf.async = true;
   tf.src = "https://api.trustedform.com/trustedform.js?token=397b7d5461ee216833f53b8504bfabae";
   document.head.appendChild(tf);
@@ -20,12 +20,12 @@ body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f8fafc;
-  color: #222;
+  color: #1f2937;
 }
 
 nav {
   background: #ffffff;
-  padding: 16px 32px;
+  padding: 18px 32px;
   font-size: 22px;
   font-weight: 700;
   color: #1e3a8a;
@@ -34,30 +34,31 @@ nav {
 
 .hero {
   background:
-    linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.85)),
-    url("https://images.unsplash.com/photo-1589571894960-20bbe2828a27");
+    linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)),
+    url("https://images.unsplash.com/photo-1589571894960-20bbe2828a27?auto=format&fit=crop&w=1600");
   background-size: cover;
   background-position: center;
-  padding: 110px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 42px;
   color: #1e3a8a;
+  margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 18px;
-  color: #334155;
+  color: #374151;
 }
 
 .hero a {
   display: inline-block;
-  margin-top: 28px;
+  margin-top: 30px;
   background: #1e3a8a;
   color: #fff;
-  padding: 14px 32px;
+  padding: 14px 34px;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
@@ -71,11 +72,12 @@ section {
 
 h2 {
   color: #1e3a8a;
+  margin-bottom: 25px;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 26px;
 }
 
@@ -118,7 +120,7 @@ button {
   width: 100%;
   padding: 14px;
   background: #1e3a8a;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   border: none;
   border-radius: 6px;
@@ -128,13 +130,13 @@ button {
 .consent {
   margin-top: 18px;
   font-size: 13px;
-  color: #334155;
+  color: #374151;
 }
 
 footer {
   text-align: center;
   font-size: 12px;
-  color: #64748b;
+  color: #6b7280;
   margin: 60px 20px;
 }
 </style>
@@ -187,12 +189,14 @@ footer {
     <h2>Apply for a Claim</h2>
 
     <form
+      id="leadForm"
       action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec"
       method="POST"
       data-tf-consent
       data-tf-cert-url-field="trustedform_cert_url"
     >
 
+      <!-- TRUSTEDFORM FIELD -->
       <input type="hidden" name="trustedform_cert_url">
 
       <label>Full Name</label>
@@ -234,6 +238,16 @@ footer {
   Nexify Claims is not a law firm and does not provide legal advice.<br>
   Submission does not create an attorney-client relationship.
 </footer>
+
+<!-- TRUSTEDFORM SUBMIT DELAY (CRITICAL) -->
+<script>
+document.getElementById("leadForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  setTimeout(() => {
+    e.target.submit();
+  }, 1500);
+});
+</script>
 
 </body>
 </html>
