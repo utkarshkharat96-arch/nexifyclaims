@@ -15,7 +15,8 @@
     if(window.TrustedForm){
       TrustedForm.create({
         onSuccess: function(url){
-          document.getElementById('trustedform_cert_url').value = url;
+          var field = document.getElementById('trustedform_cert_url');
+          if(field){ field.value = url; }
         }
       });
     }
@@ -25,56 +26,6 @@
 </script>
  
 <style>
-/* ===== ACTIVE TORT SECTION – HARD FIX ===== */
-.torts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
- 
-/* Card */
-.tort-card {
-  background: #161616;
-  border-radius: 14px;
-  overflow: hidden; /* 🔒 HARD CLIP */
-  border: 1px solid #262626;
-  max-width: 100%;
-}
- 
-/* Image wrapper */
-.tort-img {
-  width: 100%;
-  height: 150px; /* ✅ FIXED HEIGHT */
-  overflow: hidden; /* 🔒 HARD CLIP */
-}
- 
-/* Image itself */
-.tort-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ✅ NO STRETCH */
-  display: block;
-}
- 
-/* Title */
-.tort-card h3 {
-  margin: 0;
-  padding: 14px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 600;
-  background: #121212;
-  color: #fff;
-}
- 
-/* MOBILE STRICT CONTROL */
-@media (max-width: 600px) {
-  .tort-img {
-    height: 120px; /* 👈 mobile-safe */
-  }
-}
- 
-/* ===== GENERAL SITE STYLING ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -137,7 +88,7 @@ header {
   font-weight: 700;
 }
  
-/* SECTION */
+/* SECTIONS */
 .section {
   max-width: 1150px;
   margin: 90px auto;
@@ -147,10 +98,9 @@ header {
 .section h2 {
   font-size: 30px;
   margin-bottom: 40px;
-  color: #f0f0f0;
 }
  
-/* CARDS */
+/* INFO CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
@@ -169,11 +119,41 @@ header {
   margin-bottom: 16px;
 }
  
-.card h3 {
-  margin: 0 0 8px;
+/* TORT GRID */
+.torts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 22px;
 }
  
-/* FORM SECTION */
+.tort-card {
+  background: #161616;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #262626;
+}
+ 
+.tort-img {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+ 
+.tort-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.tort-card h3 {
+  margin: 0;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  background: #121212;
+}
+ 
+/* FORM */
 .form-section {
   background:
     linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
@@ -225,17 +205,22 @@ button {
   color: #bbb;
 }
  
+/* SUCCESS MESSAGE */
+#successMessage {
+  display: none;
+  margin-top: 24px;
+  color: #c8a96a;
+  font-weight: 600;
+  text-align: center;
+}
+ 
 /* FOOTER */
 footer {
   background: #0b0b0b;
-  color: #aaa;
   padding: 50px 20px;
   text-align: center;
   font-size: 13px;
-}
- 
-footer strong {
-  color: #c8a96a;
+  color: #aaa;
 }
 </style>
 </head>
@@ -244,9 +229,7 @@ footer strong {
  
 <header>
   <div class="brand">Nexify Business Solutions</div>
-  <div class="contact-top">
-    📞 +1 6615169065 | ✉️ info@nexifyclaims.online
-  </div>
+  <div class="contact-top">📞 +1 6615169065 | ✉️ info@nexifyclaims.online</div>
 </header>
  
 <section class="hero">
@@ -278,27 +261,34 @@ footer strong {
  
 <section class="section">
   <h2>Active Mass Tort & Injury Claims</h2>
- 
   <div class="torts">
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg" alt="Camp Lejeune"></div><h3>Camp Lejeune</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/2781195/pexels-photo-2781195.jpeg" alt="AFFF Firefighting Foam"></div><h3>AFFF Firefighting Foam</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/5528993/pexels-photo-5528993.jpeg" alt="Roundup"></div><h3>Roundup</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg" alt="Talcum Powder"></div><h3>Talcum Powder</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3992873/pexels-photo-3992873.jpeg" alt="Hair Relaxer"></div><h3>Hair Relaxer</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg" alt="Zantac"></div><h3>Zantac</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3875087/pexels-photo-3875087.jpeg" alt="NEC Baby Formula"></div><h3>NEC Baby Formula</h3></div>
-    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg" alt="Rideshare Assault Claims"></div><h3>Rideshare Assault Claims</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg"></div><h3>Camp Lejeune</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/2781195/pexels-photo-2781195.jpeg"></div><h3>AFFF Firefighting Foam</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/5528993/pexels-photo-5528993.jpeg"></div><h3>Roundup</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg"></div><h3>Talcum Powder</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3992873/pexels-photo-3992873.jpeg"></div><h3>Hair Relaxer</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg"></div><h3>Zantac</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3875087/pexels-photo-3875087.jpeg"></div><h3>NEC Baby Formula</h3></div>
+    <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg"></div><h3>Rideshare Assault Claims</h3></div>
   </div>
 </section>
  
 <section id="apply" class="form-section">
   <div class="form-box">
     <h2>Apply for a Free Claim Review</h2>
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec">
+ 
+    <form id="claimForm">
       <input type="hidden" id="trustedform_cert_url" name="trustedform_cert_url">
-      <label>Full Name</label><input type="text" name="name" required>
-      <label>Phone Number</label><input type="tel" name="phone" required>
-      <label>Email Address</label><input type="email" name="email" required>
+ 
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+ 
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required>
+ 
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+ 
       <label>Type of Claim</label>
       <select name="claim" required>
         <option value="">Select a claim</option>
@@ -312,21 +302,39 @@ footer strong {
         <option>Roblox Lawsuit</option>
         <option>Rideshare Assault Claims</option>
       </select>
+ 
       <div class="consent">
-        <label><input type="checkbox" required> I consent to be contacted and understand this is a free review, not legal advice.</label>
+        <label><input type="checkbox" required> I consent to be contacted.</label>
       </div>
+ 
       <button type="submit">Submit Free Claim Review</button>
     </form>
+ 
+    <div id="successMessage">
+      ✅ Thank you! Your claim has been submitted successfully. Our team will contact you shortly.
+    </div>
   </div>
 </section>
  
 <footer>
   <p><strong>Nexify Business Solutions</strong></p>
   <p>Email: info@nexifyclaims.online | Phone: +1 6615169065</p>
-  <p>California, United States</p>
-  <p>© 2026 Nexify Business Solutions. Not a law firm. No legal advice provided.</p>
+  <p>© 2026 Nexify Business Solutions. Not a law firm.</p>
 </footer>
+ 
+<script>
+document.getElementById("claimForm").addEventListener("submit", function(e){
+  e.preventDefault();
+ 
+  fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec", {
+    method: "POST",
+    body: new FormData(this)
+  }).then(() => {
+    this.style.display = "none";
+    document.getElementById("successMessage").style.display = "block";
+  }).catch(() => alert("Submission failed. Try again."));
+});
+</script>
  
 </body>
 </html>
- 
