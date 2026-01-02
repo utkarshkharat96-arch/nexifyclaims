@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Nexify Business Solutions – Free Claim Review</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<title>Nexify Business Solutions – Free Claim Review</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- TrustedForm (LOAD ONLY ONCE) -->
-  <script>
-    (function() {
-      var tf = document.createElement('script');
-      tf.type = 'text/javascript';
-      tf.async = true;
-      tf.src =
-        'https://api.trustedform.com/trustedform.js?field=trustedform_cert_url&ping_field=trustedform_ping_url';
-      document.head.appendChild(tf);
-    })();
-  </script>
+<!-- TrustedForm -->
+<script>
+(function() {
+  var tf = document.createElement('script');
+  tf.async = true;
+  tf.src = 'https://api.trustedform.com/trustedform.js';
+  tf.onload = function(){
+    if(window.TrustedForm){
+      TrustedForm.create({
+        onSuccess: function(url){
+          document.getElementById('trustedform_cert_url').value = url;
+        }
+      });
+    }
+  };
+  document.head.appendChild(tf);
+})();
+</script>
 
-  <!-- Your CSS / styles below -->
-</head>
 <style>
 body {
   margin: 0;
@@ -210,7 +215,7 @@ footer {
   <div class="form-box">
     <h2>Apply for a Free Claim Review</h2>
 
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec">
+    <form method="POST" action="YOUR_GOOGLE_SCRIPT_URL">
       <input type="hidden" id="trustedform_cert_url" name="trustedform_cert_url">
 
       <label>Full Name</label>
@@ -247,9 +252,6 @@ footer {
     </form>
   </div>
 </section>
-
-<footer>
-  © 2026 Nexify Business Solutions. Not a law firm. No legal advice provided.
 <footer>
   <p><strong>Nexify Business Solutions</strong></p>
   <p>Email: info@nexifyclaims.online | Phone: +1 6615169065</p>
@@ -259,7 +261,8 @@ footer {
   </p>
   <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
-
+<footer>
+  © 2026 Nexify Business Solutions. Not a law firm. No legal advice provided.
 </footer>
 
 </body>
