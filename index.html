@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-/* ===== ACTIVE TORT SECTION – HARD FIX ===== */
+  <head>
+<meta charset="UTF-8">
+<title>Nexify Business Solutions – Free Claim Review</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- TrustedForm -->
+<script>
+(function() {
+  var tf = document.createElement('script');
+  tf.async = true;
+  tf.src = 'https://api.trustedform.com/trustedform.js';
+  tf.onload = function(){
+    if(window.TrustedForm){
+      TrustedForm.create({
+        onSuccess: function(url){
+          document.getElementById('trustedform_cert_url').value = url;
+        }
+      });
+    }
+  };
+  document.head.appendChild(tf);
+})();
+</script>
+<style>/* ===== ACTIVE TORT SECTION – HARD FIX ===== */
 .torts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -48,30 +71,6 @@
     height: 120px;             /* 👈 mobile-safe */
   }
 }
-
-  <head>
-<meta charset="UTF-8">
-<title>Nexify Business Solutions – Free Claim Review</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- TrustedForm -->
-<script>
-(function() {
-  var tf = document.createElement('script');
-  tf.async = true;
-  tf.src = 'https://api.trustedform.com/trustedform.js';
-  tf.onload = function(){
-    if(window.TrustedForm){
-      TrustedForm.create({
-        onSuccess: function(url){
-          document.getElementById('trustedform_cert_url').value = url;
-        }
-      });
-    }
-  };
-  document.head.appendChild(tf);
-})();
-</script>
 <style>
 body {
   margin: 0;
