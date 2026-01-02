@@ -1,268 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Nexify Business Solutions – Free Claim Review</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Nexify Business Solutions – Free Claim Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- TrustedForm -->
-<script>
-(function() {
-  var tf = document.createElement('script');
-  tf.async = true;
-  tf.src = 'https://api.trustedform.com/trustedform.js';
-  tf.onload = function(){
-    if(window.TrustedForm){
-      TrustedForm.create({
-        onSuccess: function(url){
-          document.getElementById('trustedform_cert_url').value = url;
-        }
-      });
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f6f4;
+      color: #222;
     }
-  };
-  document.head.appendChild(tf);
-})();
-</script>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #e5e5e5;
-}
+    header {
+      background: #111;
+      color: #fff;
+      padding: 16px 24px;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-/* HEADER */
-header {
-  background: #0e0e0e;
-  padding: 18px 40px;
-  border-bottom: 1px solid #222;
-}
+    .hero {
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      padding: 90px 20px;
+      text-align: center;
+      color: #fff;
+    }
 
-.brand {
-  font-size: 22px;
-  font-weight: 700;
-  color: #f5f5f5;
-}
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
 
-/* HERO */
-.hero {
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;
-  text-align: center;
-}
+    .hero p {
+      font-size: 16px;
+      opacity: 0.95;
+    }
 
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 12px;
-}
+    .hero button {
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: #d4af37;
+      border: none;
+      color: #111;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-.hero p {
-  font-size: 18px;
-  max-width: 780px;
-  margin: auto;
-  color: #cfcfcf;
-}
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.hero a {
-  margin-top: 30px;
-  display: inline-block;
-  background: #c8a96a;
-  color: #111;
-  padding: 14px 36px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-}
+    .section h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
 
-/* SECTION */
-.section {
-  max-width: 1150px;
-  margin: 90px auto;
-  padding: 0 20px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
 
-.section h2 {
-  font-size: 30px;
-  margin-bottom: 40px;
-  color: #f0f0f0;
-}
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
 
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 26px;
-}
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
 
-.card {
-  background: #181818;
-  padding: 28px;
-  border-radius: 10px;
-  border: 1px solid #262626;
-}
+    .tort-list {
+      max-width: 700px;
+      margin: auto;
+    }
 
-.card img {
-  width: 46px;
-  margin-bottom: 16px;
-}
+    .tort {
+      background: #fff;
+      padding: 18px 20px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-.card h3 {
-  margin: 0 0 8px;
-}
+    form {
+      background: #fff;
+      max-width: 650px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
 
-/* FORM SECTION */
-.form-section {
-  background:
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-    url("https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg");
-  background-size: cover;
-  padding: 100px 20px;
-}
+    form h3 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-.form-box {
-  max-width: 850px;
-  margin: auto;
-  background: #141414;
-  padding: 48px;
-  border-radius: 12px;
-  border: 1px solid #2a2a2a;
-}
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-label {
-  display: block;
-  margin-top: 16px;
-  font-weight: 600;
-}
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-input, select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 4px;
-  border: 1px solid #333;
-  background: #1c1c1c;
-  color: #fff;
-}
+    button.submit {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: #111;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-button {
-  width: 100%;
-  margin-top: 30px;
-  padding: 15px;
-  background: #c8a96a;
-  color: #111;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-}
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+    }
 
-.consent {
-  font-size: 13px;
-  margin-top: 16px;
-  color: #bbb;
-}
-
-/* FOOTER */
-footer {
-  background: #0b0b0b;
-  color: #aaa;
-  padding: 50px 20px;
-  text-align: center;
-  font-size: 13px;
-}
-</style>
+    footer p {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="brand">Nexify Business Solutions</div>
+  Nexify Business Solutions
 </header>
 
 <section class="hero">
   <h1>You May Be Eligible for Financial Compensation</h1>
   <p>Free & confidential mass tort claim review. No obligation.</p>
-  <a href="#apply">Check Eligibility</a>
+  <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
+    Check Eligibility
+  </button>
 </section>
 
 <section class="section">
   <h2>Why Choose Nexify Business Solutions?</h2>
+
   <div class="cards">
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+      <img src="https://images.unsplash.com/photo-1555375771-14b2b7d6a6a3?auto=format&fit=crop&w=800&q=80">
       <h3>Free Case Review</h3>
-      <p>No cost, no obligation.</p>
+      <p>No cost. No obligation.</p>
     </div>
+
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png">
+      <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=800&q=80">
       <h3>Confidential & Secure</h3>
       <p>Your information is protected.</p>
     </div>
+
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png">
+      <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80">
       <h3>Legal Connections</h3>
-      <p>We connect you with legal professionals.</p>
+      <p>We connect eligible claimants with legal professionals.</p>
     </div>
   </div>
 </section>
 
-<section id="apply" class="form-section">
-  <div class="form-box">
-    <h2>Apply for a Free Claim Review</h2>
+<section class="section">
+  <h2>Active Mass Tort & Injury Claims</h2>
 
-    <form method="POST" action="YOUR_GOOGLE_SCRIPT_URL">
-      <input type="hidden" id="trustedform_cert_url" name="trustedform_cert_url">
-
-      <label>Full Name</label>
-      <input type="text" name="name" required>
-
-      <label>Phone Number</label>
-      <input type="tel" name="phone" required>
-
-      <label>Email Address</label>
-      <input type="email" name="email" required>
-
-      <label>Type of Claim</label>
-      <select name="claim" required>
-        <option value="">Select a claim</option>
-        <option>Camp Lejeune</option>
-        <option>AFFF Firefighting Foam</option>
-        <option>Roundup</option>
-        <option>Talcum Powder</option>
-        <option>Hair Relaxer</option>
-        <option>Zantac</option>
-        <option>NEC Baby Formula</option>
-        <option>Roblox Lawsuit</option>
-        <option>Rideshare Assault Claims</option>
-      </select>
-
-      <div class="consent">
-        <label>
-          <input type="checkbox" required>
-          I consent to be contacted and understand this is a free review, not legal advice.
-        </label>
-      </div>
-
-      <button type="submit">Submit Free Claim Review</button>
-    </form>
+  <div class="tort-list">
+    <div class="tort">Camp Lejeune Water Contamination</div>
+    <div class="tort">AFFF Firefighting Foam</div>
+    <div class="tort">Roundup Herbicide</div>
+    <div class="tort">Talcum Powder</div>
+    <div class="tort">Hair Relaxer</div>
+    <div class="tort">Zantac</div>
+    <div class="tort">NEC Baby Formula</div>
+    <div class="tort">Roblox Lawsuit</div>
+    <div class="tort">Rideshare Sexual Assault</div>
   </div>
 </section>
+
+<section class="section" id="apply">
+  <form>
+    <h3>Apply for a Free Claim Review</h3>
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Phone Number</label>
+    <input type="tel" required>
+
+    <label>Email Address</label>
+    <input type="email" required>
+
+    <label>Type of Claim</label>
+    <select required>
+      <option value="">Select a claim</option>
+      <option>Camp Lejeune</option>
+      <option>AFFF Firefighting Foam</option>
+      <option>Roundup</option>
+      <option>Talcum Powder</option>
+      <option>Hair Relaxer</option>
+      <option>Zantac</option>
+      <option>NEC Baby Formula</option>
+      <option>Roblox</option>
+      <option>Rideshare Assault</option>
+    </select>
+
+    <button class="submit">Submit Claim</button>
+  </form>
+</section>
+
 <footer>
-  <p><strong>Nexify Business Solutions</strong></p>
-  <p>Email: info@nexifyclaims.online | Phone: +1 6615169065</p>
   <p>
     Nexify Business Solutions is not a law firm and does not provide legal advice.
     Submission of information does not create an attorney-client relationship.
   </p>
+  <p>
+    Contact: info@nexifyclaims.online | +1 6615169065 | CA, United States
+  </p>
   <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
-</footer>
-<footer>
-  © 2026 Nexify Business Solutions. Not a law firm. No legal advice provided.
 </footer>
 
 </body>
