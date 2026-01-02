@@ -1,253 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Nexify Claims – Free Case Review</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Nexify Claims – Mass Tort Claims</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- TRUSTEDFORM SCRIPT -->
-<script>
-(function() {
-  var tf = document.createElement("script");
-  tf.async = true;
-  tf.src = "https://api.trustedform.com/trustedform.js?token=397b7d5461ee216833f53b8504bfabae";
-  document.head.appendChild(tf);
-})();
-</script>
+  <!-- TrustedForm SCRIPT (MUST be in <head>) -->
+  <script type="text/javascript">
+    (function() {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript';
+      tf.async = true;
+      tf.src = 'https://api.trustedform.com/trustedform.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
 
-<style>
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f8fafc;
-  color: #1f2937;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+    }
 
-nav {
-  background: #ffffff;
-  padding: 18px 32px;
-  font-size: 22px;
-  font-weight: 700;
-  color: #1e3a8a;
-  box-shadow: 0 2px 12px rgba(0,0,0,.06);
-}
+    header {
+      background: #ffffff;
+      padding: 16px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #1e3a8a;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
 
-.hero {
-  background:
-    linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)),
-    url("https://images.unsplash.com/photo-1589571894960-20bbe2828a27?auto=format&fit=crop&w=1600");
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;
-  text-align: center;
-}
+    .hero {
+      background: linear-gradient(
+        rgba(30,58,138,0.85),
+        rgba(30,58,138,0.85)
+      ),
+      url("https://images.unsplash.com/photo-1589994965851-a8f479c573a9") center/cover no-repeat;
+      padding: 90px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
 
-.hero h1 {
-  font-size: 42px;
-  color: #1e3a8a;
-  margin-bottom: 10px;
-}
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
 
-.hero p {
-  font-size: 18px;
-  color: #374151;
-}
+    .hero p {
+      font-size: 16px;
+      max-width: 650px;
+      margin: auto;
+    }
 
-.hero a {
-  display: inline-block;
-  margin-top: 30px;
-  background: #1e3a8a;
-  color: #fff;
-  padding: 14px 34px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-}
+    .container {
+      max-width: 900px;
+      margin: -60px auto 60px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
 
-section {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
+    h2 {
+      text-align: center;
+      color: #1e3a8a;
+    }
 
-h2 {
-  color: #1e3a8a;
-  margin-bottom: 25px;
-}
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-}
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+    }
 
-.card {
-  background: #ffffff;
-  padding: 26px;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.08);
-}
+    .consent {
+      margin-top: 20px;
+      font-size: 13px;
+    }
 
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 14px;
-}
+    .submit-btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: #1e3a8a;
+      color: #ffffff;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-.form-box {
-  background: #ffffff;
-  padding: 42px;
-  border-radius: 14px;
-  box-shadow: 0 10px 40px rgba(0,0,0,.12);
-}
+    .submit-btn:hover {
+      background: #172554;
+    }
 
-label {
-  margin-top: 16px;
-  display: block;
-  font-weight: 600;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 5px;
-  border: 1px solid #cbd5e1;
-}
-
-button {
-  margin-top: 26px;
-  width: 100%;
-  padding: 14px;
-  background: #1e3a8a;
-  color: #ffffff;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.consent {
-  margin-top: 18px;
-  font-size: 13px;
-  color: #374151;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  color: #6b7280;
-  margin: 60px 20px;
-}
-</style>
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+      padding: 30px;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>Nexify Claims</nav>
+<header>Nexify Claims</header>
 
-<div class="hero">
+<section class="hero">
   <h1>You May Be Eligible for Financial Compensation</h1>
   <p>Free & confidential mass tort claim review. No obligation.</p>
-  <a href="#claim-form">Check Eligibility</a>
+</section>
+
+<div class="container">
+  <h2>Apply for a Claim</h2>
+
+  <form method="POST" action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec">
+
+    <!-- REQUIRED FOR TRUSTEDFORM -->
+    <input type="hidden" name="trustedform_cert_url" id="trustedform_cert_url">
+
+    <label>Full Name</label>
+    <input type="text" name="full_name" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>Email Address</label>
+    <input type="email" name="email" required>
+
+    <label>Type of Claim</label>
+    <select name="claim_type" required>
+      <option value="">Select a claim</option>
+      <option>Camp Lejeune</option>
+      <option>AFFF Firefighting Foam</option>
+      <option>Roundup</option>
+      <option>Roblox Lawsuit</option>
+      <option>Rideshare Lawsuit</option>
+    </select>
+
+    <div class="consent">
+      <input type="checkbox" required>
+      I agree to be contacted by Nexify Claims regarding my inquiry. I understand Nexify Claims is not a law firm and does not provide legal advice.
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Claim</button>
+  </form>
 </div>
 
-<section>
-  <h2>Why Choose Nexify Claims?</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
-      <h3>Free Case Review</h3>
-      <p>No cost, no obligation.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600267165477-6d4cc741b379">
-      <h3>Confidential & Secure</h3>
-      <p>Your information is protected.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-      <h3>Legal Connections</h3>
-      <p>We connect you with legal professionals.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Active Mass Tort Lawsuits</h2>
-  <div class="cards">
-    <div class="card">Camp Lejeune</div>
-    <div class="card">AFFF Firefighting Foam</div>
-    <div class="card">Roundup</div>
-    <div class="card">Roblox Lawsuit</div>
-    <div class="card">Rideshare Lawsuit</div>
-  </div>
-</section>
-
-<section id="claim-form">
-  <div class="form-box">
-    <h2>Apply for a Claim</h2>
-
-    <form
-      id="leadForm"
-      action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec"
-      method="POST"
-      data-tf-consent
-      data-tf-cert-url-field="trustedform_cert_url"
-    >
-
-      <!-- TRUSTEDFORM FIELD -->
-      <input type="hidden" name="trustedform_cert_url">
-
-      <label>Full Name</label>
-      <input type="text" name="name" required>
-
-      <label>Phone Number</label>
-      <input type="tel" name="phone" required>
-
-      <label>Email Address</label>
-      <input type="email" name="email" required>
-
-      <label>Type of Claim</label>
-      <select name="claim" required>
-        <option value="">Select a claim</option>
-        <option>Camp Lejeune</option>
-        <option>AFFF</option>
-        <option>Roundup</option>
-        <option>Roblox</option>
-        <option>Rideshare</option>
-      </select>
-
-      <label>Additional Details</label>
-      <textarea name="message" rows="4"></textarea>
-
-      <div class="consent">
-        <label>
-          <input type="checkbox" required>
-          I consent to be contacted by Nexify Claims and its partners via calls,
-          texts, and emails (including automated technology).
-        </label>
-      </div>
-
-      <button type="submit">Submit Claim for Review</button>
-    </form>
-  </div>
-</section>
-
 <footer>
-  Nexify Claims is not a law firm and does not provide legal advice.<br>
-  Submission does not create an attorney-client relationship.
+  © 2026 Nexify Claims. Not a law firm. No legal advice provided.
 </footer>
-
-<!-- TRUSTEDFORM SUBMIT DELAY (CRITICAL) -->
-<script>
-document.getElementById("leadForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  setTimeout(() => {
-    e.target.submit();
-  }, 1500);
-});
-</script>
 
 </body>
 </html>
