@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nexify Business Solutions – Free Case Review</title>
+<title>Nexify Business Solutions – Free Claim Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- TrustedForm -->
@@ -18,77 +18,72 @@
 <style>
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f6f8fb;
-  color: #1f2937;
+  font-family: Arial, sans-serif;
+  background: #f7f7f5;
+  color: #222;
 }
 
+/* HEADER */
 header {
   background: #ffffff;
   padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #e5e5e5;
 }
 
 header .brand {
   font-size: 22px;
   font-weight: 700;
-  color: #1e3a8a;
+  color: #222;
 }
 
-nav a {
-  margin-left: 22px;
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-}
-
+/* HERO */
 .hero {
   background:
-    linear-gradient(rgba(30,58,138,0.7), rgba(30,58,138,0.7)),
-    url("https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg");
+    linear-gradient(rgba(245,245,242,0.9), rgba(245,245,242,0.9)),
+    url("https://images.pexels.com/photos/5668770/pexels-photo-5668770.jpeg");
   background-size: cover;
   background-position: center;
-  padding: 110px 20px;
+  padding: 120px 20px;
   text-align: center;
-  color: #ffffff;
 }
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
 .hero p {
   font-size: 18px;
-  max-width: 760px;
+  max-width: 780px;
   margin: auto;
+  color: #444;
 }
 
 .hero a {
   display: inline-block;
   margin-top: 30px;
-  background: #ffffff;
-  color: #1e3a8a;
-  padding: 14px 32px;
-  border-radius: 6px;
-  font-weight: 600;
+  background: #222;
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 4px;
   text-decoration: none;
+  font-weight: 600;
 }
 
+/* SECTIONS */
 .section {
   max-width: 1150px;
-  margin: 80px auto;
+  margin: 90px auto;
   padding: 0 20px;
 }
 
 .section h2 {
-  color: #1e3a8a;
-  margin-bottom: 30px;
+  font-size: 30px;
+  margin-bottom: 35px;
 }
 
+/* TRUST CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
@@ -97,34 +92,41 @@ nav a {
 
 .card {
   background: #ffffff;
-  padding: 26px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
 }
 
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* FORM SECTION */
 .form-section {
-  background: #eef2ff;
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
   padding: 90px 20px;
 }
 
 .form-box {
   max-width: 850px;
   margin: auto;
-  background: #ffffff;
-  padding: 46px;
-  border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  background: #fafafa;
+  padding: 48px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
 }
 
 .free-badge {
-  background: #e0f2fe;
-  color: #0369a1;
-  padding: 6px 14px;
+  background: #eaeaea;
+  color: #111;
   display: inline-block;
+  padding: 6px 14px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 label {
@@ -137,32 +139,33 @@ input, select {
   width: 100%;
   padding: 12px;
   margin-top: 6px;
-  border-radius: 6px;
-  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  border: 1px solid #cfcfcf;
 }
 
 button {
   width: 100%;
-  margin-top: 28px;
+  margin-top: 30px;
   padding: 15px;
-  background: #1e3a8a;
+  background: #222;
   color: #ffffff;
   font-size: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .consent {
   margin-top: 18px;
   font-size: 13px;
-  color: #374151;
+  color: #444;
 }
 
+/* FOOTER */
 footer {
-  background: #111827;
-  color: #d1d5db;
-  padding: 45px 20px;
+  background: #111;
+  color: #ccc;
+  padding: 50px 20px;
   font-size: 13px;
   text-align: center;
 }
@@ -173,20 +176,37 @@ footer {
 
 <header>
   <div class="brand">Nexify Business Solutions</div>
-  <nav>
-    <a href="#cases">Active Lawsuits</a>
-    <a href="#apply">Apply</a>
-  </nav>
 </header>
 
 <section class="hero">
-  <h1>You May Be Eligible for Financial Compensation</h1>
-  <p>Answer a few questions to see if you qualify. 100% free. No obligation.</p>
+  <h1>Check If You Qualify for Financial Compensation</h1>
+  <p>
+    Answer a few questions to see if you may be eligible for a mass tort or injury-related claim.
+    This review is 100% free and comes with no obligation.
+  </p>
   <a href="#apply">Check Eligibility</a>
 </section>
 
-<section id="cases" class="section">
-  <h2>Active Mass Tort Lawsuits</h2>
+<section class="section">
+  <h2>Why Nexify Business Solutions?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>No Cost to Apply</h3>
+      <p>Your claim review is completely free.</p>
+    </div>
+    <div class="card">
+      <h3>Confidential Review</h3>
+      <p>Your information is handled securely and responsibly.</p>
+    </div>
+    <div class="card">
+      <h3>Legal Network Access</h3>
+      <p>We connect qualified individuals with legal professionals.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Active Mass Tort & Injury Claims</h2>
   <div class="cards">
     <div class="card">Camp Lejeune</div>
     <div class="card">AFFF Firefighting Foam</div>
@@ -197,17 +217,14 @@ footer {
     <div class="card">NEC Baby Formula</div>
     <div class="card">Paraquat</div>
     <div class="card">Roblox Lawsuit</div>
-    <div class="card">Rideshare Assault Lawsuit</div>
+    <div class="card">Rideshare Assault Claims</div>
   </div>
 </section>
 
 <section id="apply" class="form-section">
   <div class="form-box">
-    <div class="free-badge">✔ 100% FREE CLAIM REVIEW</div>
+    <div class="free-badge">100% FREE CLAIM REVIEW</div>
     <h2>Apply for a Claim</h2>
-    <p style="font-size:14px;color:#475569;">
-      There is no cost to submit your information. This does not create an attorney-client relationship.
-    </p>
 
     <form method="POST" action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec">
       <input type="hidden" name="trustedform_cert_url">
@@ -233,13 +250,14 @@ footer {
         <option>NEC Baby Formula</option>
         <option>Paraquat</option>
         <option>Roblox Lawsuit</option>
-        <option>Rideshare Assault Lawsuit</option>
+        <option>Rideshare Assault Claims</option>
       </select>
 
       <div class="consent">
         <label>
           <input type="checkbox" required>
-          I agree to be contacted by Nexify Business Solutions and its partners. I understand this submission is free and does not create an attorney-client relationship.
+          I agree to be contacted by Nexify Business Solutions and its partners regarding my inquiry.
+          I understand this is a free review and does not create an attorney-client relationship.
         </label>
       </div>
 
