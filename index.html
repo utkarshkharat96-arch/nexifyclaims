@@ -2,46 +2,44 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nexify Claims – Mass Tort Claim Review</title>
+<title>Nexify Business Solutions – Free Case Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- TrustedForm -->
 <script>
 (function() {
   var tf = document.createElement('script');
-  tf.type = 'text/javascript';
   tf.async = true;
   tf.src = 'https://api.trustedform.com/trustedform.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(tf, s);
+  document.head.appendChild(tf);
 })();
 </script>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f6f8fb;
   color: #1f2937;
 }
 
 header {
   background: #ffffff;
-  padding: 16px 40px;
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
-header .logo {
+header .brand {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
   color: #1e3a8a;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 22px;
   text-decoration: none;
   color: #374151;
   font-weight: 500;
@@ -49,64 +47,85 @@ nav a {
 
 .hero {
   background:
-    linear-gradient(rgba(30,58,138,0.65), rgba(30,58,138,0.65)),
-    url("https://images.unsplash.com/photo-1589994965851-a8f479c573a9");
+    linear-gradient(rgba(30,58,138,0.7), rgba(30,58,138,0.7)),
+    url("https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg");
   background-size: cover;
   background-position: center;
-  padding: 90px 20px;
+  padding: 110px 20px;
   text-align: center;
   color: #ffffff;
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 12px;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  max-width: 700px;
+  font-size: 18px;
+  max-width: 760px;
   margin: auto;
-  font-size: 17px;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 30px;
+  background: #ffffff;
+  color: #1e3a8a;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .section {
-  max-width: 1100px;
-  margin: 70px auto;
+  max-width: 1150px;
+  margin: 80px auto;
   padding: 0 20px;
+}
+
+.section h2 {
+  color: #1e3a8a;
+  margin-bottom: 30px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 25px;
+  gap: 28px;
 }
 
 .card {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.form-section {
+  background: #eef2ff;
+  padding: 80px 20px;
 }
 
 .form-box {
-  background: #ffffff;
-  max-width: 900px;
+  max-width: 850px;
   margin: auto;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 44px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
 }
 
 label {
   display: block;
-  margin-top: 15px;
-  font-weight: bold;
+  margin-top: 16px;
+  font-weight: 600;
 }
 
 input, select {
@@ -114,25 +133,31 @@ input, select {
   padding: 12px;
   margin-top: 6px;
   border-radius: 6px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #cbd5e1;
 }
 
 button {
   width: 100%;
-  margin-top: 25px;
-  padding: 14px;
+  margin-top: 26px;
+  padding: 15px;
   background: #1e3a8a;
   color: #ffffff;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
+}
+
+.consent {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #374151;
 }
 
 footer {
   background: #111827;
   color: #d1d5db;
-  padding: 40px;
+  padding: 45px 20px;
   font-size: 13px;
   text-align: center;
 }
@@ -142,41 +167,42 @@ footer {
 <body>
 
 <header>
-  <div class="logo">Nexify Claims</div>
+  <div class="brand">Nexify Business Solutions</div>
   <nav>
-    <a href="#cases">Cases</a>
+    <a href="#cases">Active Lawsuits</a>
     <a href="#apply">Apply</a>
   </nav>
 </header>
 
 <section class="hero">
   <h1>You May Be Eligible for Financial Compensation</h1>
-  <p>Free & confidential mass tort claim review. No obligation.</p>
+  <p>Answer a few questions to see if you qualify for a mass tort or injury-related claim. No cost. No obligation.</p>
+  <a href="#apply">Check Eligibility</a>
 </section>
 
 <section class="section">
-  <h2>Why Choose Nexify Claims?</h2>
+  <h2>Why Choose Nexify Business Solutions?</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f">
+      <img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg">
       <h3>Free Case Review</h3>
-      <p>No cost, no obligation.</p>
+      <p>There is no cost to check if you qualify.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-      <h3>Confidential & Secure</h3>
-      <p>Your information is protected.</p>
+      <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg">
+      <h3>Secure & Confidential</h3>
+      <p>Your information is protected and handled responsibly.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
+      <img src="https://images.pexels.com/photos/4427610/pexels-photo-4427610.jpeg">
       <h3>Legal Connections</h3>
-      <p>We connect you with professionals.</p>
+      <p>We connect eligible claimants with legal professionals.</p>
     </div>
   </div>
 </section>
 
 <section id="cases" class="section">
-  <h2>Active Mass Tort Cases</h2>
+  <h2>Active Mass Tort Lawsuits</h2>
   <div class="cards">
     <div class="card">Camp Lejeune</div>
     <div class="card">AFFF Firefighting Foam</div>
@@ -186,7 +212,7 @@ footer {
   </div>
 </section>
 
-<section id="apply" class="section">
+<section id="apply" class="form-section">
   <div class="form-box">
     <h2>Apply for a Claim</h2>
 
@@ -204,18 +230,20 @@ footer {
 
       <label>Type of Claim</label>
       <select name="claim" required>
-        <option value="">Select</option>
+        <option value="">Select a claim</option>
         <option>Camp Lejeune</option>
-        <option>AFFF</option>
+        <option>AFFF Firefighting Foam</option>
         <option>Roundup</option>
         <option>Roblox</option>
         <option>Rideshare</option>
       </select>
 
-      <label style="font-size:13px;margin-top:15px;">
-        <input type="checkbox" required>
-        I agree to be contacted. Nexify Claims is not a law firm and does not provide legal advice.
-      </label>
+      <div class="consent">
+        <label>
+          <input type="checkbox" required>
+          I agree to be contacted by Nexify Business Solutions and its partners regarding my inquiry. I understand this does not create an attorney-client relationship.
+        </label>
+      </div>
 
       <button type="submit">Submit Claim</button>
     </form>
@@ -223,7 +251,7 @@ footer {
 </section>
 
 <footer>
-  © 2026 Nexify Claims. Not a law firm. No legal advice provided.
+  © 2026 Nexify Business Solutions. Not a law firm. No legal advice provided.
 </footer>
 
 </body>
