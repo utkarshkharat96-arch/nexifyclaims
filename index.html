@@ -188,6 +188,54 @@ footer strong {
   color: #c8a96a;
 }
 </style>
+  /* ===== ACTIVE TORT SECTION – HARD FIX ===== */
+.torts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+.tort-card {
+  background: #161616;
+  border-radius: 14px;
+  overflow: hidden;            /* 🔒 HARD CLIP */
+  border: 1px solid #262626;
+  max-width: 100%;
+}
+
+/* Image wrapper */
+.tort-img {
+  width: 100%;
+  height: 150px;               /* ✅ FIXED HEIGHT */
+  overflow: hidden;            /* 🔒 HARD CLIP */
+}
+
+/* Image itself */
+.tort-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* ✅ NO STRETCH */
+  display: block;
+}
+
+/* Title */
+.tort-card h3 {
+  margin: 0;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  background: #121212;
+  color: #fff;
+}
+
+/* MOBILE STRICT CONTROL */
+@media (max-width: 600px) {
+  .tort-img {
+    height: 120px;             /* 👈 mobile-safe */
+  }
+}
 </head>
 
 <body>
@@ -226,92 +274,69 @@ footer strong {
   </div>
 </section>
 <section class="section">
-/* ACTIVE TORTS FIX */
-.torts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.tort-card {
-  background: #181818;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #262626;
-  display: flex;
-  flex-direction: column;
-}
-
-.tort-card img {
-  width: 100%;
-  height: 160px;            /* controls image size */
-  object-fit: cover;        /* prevents stretching */
-  display: block;
-}
-
-.tort-card h3 {
-  padding: 14px 16px;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  background: #141414;
-}
-
-/* MOBILE OPTIMIZATION */
-@media (max-width: 600px) {
-  .tort-card img {
-    height: 140px;
-  }
-}
-<section class="section">
   <h2>Active Mass Tort & Injury Claims</h2>
 
   <div class="torts">
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg" alt="Camp Lejeune">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg" alt="Camp Lejeune">
+      </div>
       <h3>Camp Lejeune</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/2781195/pexels-photo-2781195.jpeg" alt="AFFF Firefighting Foam">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/2781195/pexels-photo-2781195.jpeg" alt="AFFF Firefighting Foam">
+      </div>
       <h3>AFFF Firefighting Foam</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/5528993/pexels-photo-5528993.jpeg" alt="Roundup">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/5528993/pexels-photo-5528993.jpeg" alt="Roundup">
+      </div>
       <h3>Roundup</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg" alt="Talcum Powder">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg" alt="Talcum Powder">
+      </div>
       <h3>Talcum Powder</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/3992873/pexels-photo-3992873.jpeg" alt="Hair Relaxer">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/3992873/pexels-photo-3992873.jpeg" alt="Hair Relaxer">
+      </div>
       <h3>Hair Relaxer</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg" alt="Zantac">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg" alt="Zantac">
+      </div>
       <h3>Zantac</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/3875087/pexels-photo-3875087.jpeg" alt="NEC Baby Formula">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/3875087/pexels-photo-3875087.jpeg" alt="NEC Baby Formula">
+      </div>
       <h3>NEC Baby Formula</h3>
     </div>
 
     <div class="tort-card">
-      <img src="https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg" alt="Rideshare Assault Claims">
+      <div class="tort-img">
+        <img src="https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg" alt="Rideshare Assault Claims">
+      </div>
       <h3>Rideshare Assault Claims</h3>
     </div>
 
   </div>
 </section>
-  
+
 <section id="apply" class="form-section">
   <div class="form-box">
     <h2>Apply for a Free Claim Review</h2>
