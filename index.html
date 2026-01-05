@@ -5,22 +5,14 @@
 <title>Nexify Business Solutions – Free Claim Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- TrustedForm -->
+<!-- OFFICIAL TRUSTEDFORM SCRIPT -->
 <script>
 (function() {
   var tf = document.createElement('script');
+  tf.type = 'text/javascript';
   tf.async = true;
-  tf.src = 'https://api.trustedform.com/trustedform.js';
-  tf.onload = function(){
-    if(window.TrustedForm){
-      TrustedForm.create({
-        onSuccess: function(url){
-          var el = document.getElementById('trustedform_cert_url');
-          if(el){ el.value = url; }
-        }
-      });
-    }
-  };
+  tf.src =
+    'https://api.trustedform.com/trustedform.js?field=trustedform_cert_url&ping_field=trustedform_ping_url';
   document.head.appendChild(tf);
 })();
 </script>
@@ -100,25 +92,6 @@ header {
   margin-bottom: 40px;
 }
 
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 26px;
-}
-
-.card {
-  background: #181818;
-  padding: 28px;
-  border-radius: 10px;
-  border: 1px solid #262626;
-}
-
-.card img {
-  width: 46px;
-  margin-bottom: 16px;
-}
-
 /* TORTS */
 .torts {
   display: grid;
@@ -151,7 +124,7 @@ header {
   background: #121212;
 }
 
-/* FORM */
+/* FORM SECTION */
 .form-section {
   background:
     linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
@@ -246,7 +219,9 @@ footer {
   <div class="form-box">
 
     <form id="claimForm">
-      <input type="hidden" id="trustedform_cert_url" name="trustedform_cert_url">
+      <!-- TRUSTEDFORM REQUIRED FIELDS -->
+      <input type="hidden" name="trustedform_cert_url" id="trustedform_cert_url">
+      <input type="hidden" name="trustedform_ping_url" id="trustedform_ping_url">
 
       <label>Full Name</label>
       <input type="text" name="name" required>
@@ -270,14 +245,13 @@ footer {
         <option>Rideshare Assault Claims</option>
       </select>
 
-      <!-- GOOGLE ADS TCPA CONSENT -->
+      <!-- TCPA CONSENT -->
       <div class="consent">
         <label>
           <input type="checkbox" required>
-          By clicking “Submit Free Claim Review”, I expressly consent to be contacted by
-          Nexify Business Solutions and its partners via phone calls, text messages,
-          emails, or prerecorded messages, including through automated dialing systems,
-          even if my number is on a Do Not Call list. Consent is not a condition of purchase.
+          By submitting this form, I consent to be contacted by Nexify Business Solutions
+          and its partners via phone, SMS, email, or automated systems.
+          Consent is not a condition of purchase.
         </label>
       </div>
 
@@ -288,11 +262,9 @@ footer {
       ✅ Thank you! Your claim has been submitted successfully.
     </div>
 
-    <!-- NON-LAW FIRM DISCLAIMER -->
-    <p style="font-size:13px;color:#aaa;line-height:1.6;margin-top:25px;">
+    <p style="font-size:13px;color:#aaa;margin-top:25px;">
       Nexify Business Solutions is not a law firm and does not provide legal advice.
       Submission of information does not create an attorney-client relationship.
-      Eligibility for compensation is not guaranteed.
     </p>
 
   </div>
@@ -300,22 +272,7 @@ footer {
 
 <footer>
   <p><strong>Nexify Business Solutions</strong></p>
-
-  <p>
-    Nexify Business Solutions is not a law firm and does not provide legal advice.
-    We are a legal marketing and information service that connects consumers with
-    attorneys or legal professionals when appropriate.
-  </p>
-
-  <p>
-    Submitting information does not create an attorney-client relationship.
-    Results may vary. Prior outcomes do not guarantee similar results.
-  </p>
-
-  <p>
-    Contact: info@nexifyclaims.online | +1 661-516-9065
-  </p>
-
+  <p>Email: info@nexifyclaims.online | Phone: +1 661-516-9065</p>
   <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
 
