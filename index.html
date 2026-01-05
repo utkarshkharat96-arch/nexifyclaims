@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Nexify Business Solutions – Free Claim Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
 <!-- TrustedForm -->
 <script>
 (function() {
@@ -24,7 +24,7 @@
   document.head.appendChild(tf);
 })();
 </script>
- 
+
 <style>
 body {
   margin: 0;
@@ -32,7 +32,7 @@ body {
   background: #111;
   color: #e5e5e5;
 }
- 
+
 /* HEADER */
 header {
   background: #0e0e0e;
@@ -42,18 +42,18 @@ header {
   justify-content: space-between;
   align-items: center;
 }
- 
+
 .brand {
   font-size: 22px;
   font-weight: 700;
   color: #f5f5f5;
 }
- 
+
 .contact-top {
   font-size: 13px;
   color: #c8a96a;
 }
- 
+
 /* HERO */
 .hero {
   background:
@@ -64,19 +64,19 @@ header {
   padding: 120px 20px;
   text-align: center;
 }
- 
+
 .hero h1 {
   font-size: 44px;
   margin-bottom: 12px;
 }
- 
+
 .hero p {
   font-size: 18px;
   max-width: 780px;
   margin: auto;
   color: #cfcfcf;
 }
- 
+
 .hero a {
   margin-top: 30px;
   display: inline-block;
@@ -87,71 +87,71 @@ header {
   text-decoration: none;
   font-weight: 700;
 }
- 
+
 /* SECTION */
 .section {
   max-width: 1150px;
   margin: 90px auto;
   padding: 0 20px;
 }
- 
+
 .section h2 {
   font-size: 30px;
   margin-bottom: 40px;
 }
- 
+
 /* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 26px;
 }
- 
+
 .card {
   background: #181818;
   padding: 28px;
   border-radius: 10px;
   border: 1px solid #262626;
 }
- 
+
 .card img {
   width: 46px;
   margin-bottom: 16px;
 }
- 
+
 /* TORTS */
 .torts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 22px;
 }
- 
+
 .tort-card {
   background: #161616;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #262626;
 }
- 
+
 .tort-img {
   height: 150px;
   overflow: hidden;
 }
- 
+
 .tort-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
- 
+
 .tort-card h3 {
   margin: 0;
   padding: 14px;
   text-align: center;
   background: #121212;
 }
- 
-/* FORM SECTION */
+
+/* FORM */
 .form-section {
   background:
     linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
@@ -159,7 +159,7 @@ header {
   background-size: cover;
   padding: 100px 20px;
 }
- 
+
 .form-box {
   max-width: 850px;
   margin: auto;
@@ -168,12 +168,12 @@ header {
   border-radius: 12px;
   border: 1px solid #2a2a2a;
 }
- 
+
 label {
   display: block;
   margin-top: 16px;
 }
- 
+
 input, select {
   width: 100%;
   padding: 12px;
@@ -182,7 +182,7 @@ input, select {
   border: 1px solid #333;
   color: #fff;
 }
- 
+
 button {
   width: 100%;
   margin-top: 30px;
@@ -192,24 +192,22 @@ button {
   font-weight: 700;
   border: none;
 }
- 
+
 .consent {
   font-size: 13px;
   margin-top: 16px;
   color: #bbb;
 }
- 
+
 /* SUCCESS MESSAGE */
 #successMessage {
   display: none;
   text-align: center;
   padding: 40px;
-}
- 
-#successMessage h2 {
   color: #c8a96a;
+  font-weight: 600;
 }
- 
+
 /* FOOTER */
 footer {
   background: #0b0b0b;
@@ -220,20 +218,20 @@ footer {
 }
 </style>
 </head>
- 
+
 <body>
- 
+
 <header>
   <div class="brand">Nexify Business Solutions</div>
-  <div class="contact-top">📞 +1 6615169065 | ✉️ info@nexifyclaims.online</div>
+  <div class="contact-top">📞 +1 661-516-9065 | ✉️ info@nexifyclaims.online</div>
 </header>
- 
+
 <section class="hero">
   <h1>You May Be Eligible for Financial Compensation</h1>
   <p>Free & confidential mass tort claim review. No obligation.</p>
   <a href="#apply">Check Eligibility</a>
 </section>
- 
+
 <section class="section">
   <h2>Active Mass Tort & Injury Claims</h2>
   <div class="torts">
@@ -243,24 +241,22 @@ footer {
     <div class="tort-card"><div class="tort-img"><img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg"></div><h3>Talcum Powder</h3></div>
   </div>
 </section>
- 
+
 <section id="apply" class="form-section">
   <div class="form-box">
- 
-    <form id="claimForm" method="POST"
-      action="https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec">
- 
+
+    <form id="claimForm">
       <input type="hidden" id="trustedform_cert_url" name="trustedform_cert_url">
- 
+
       <label>Full Name</label>
       <input type="text" name="name" required>
- 
+
       <label>Phone Number</label>
       <input type="tel" name="phone" required>
- 
+
       <label>Email Address</label>
       <input type="email" name="email" required>
- 
+
       <label>Type of Claim</label>
       <select name="claim" required>
         <option value="">Select a claim</option>
@@ -272,44 +268,71 @@ footer {
         <option>Zantac</option>
         <option>NEC Baby Formula</option>
         <option>Rideshare Assault Claims</option>
-       <option>Roblox</option>
       </select>
- 
+
+      <!-- GOOGLE ADS TCPA CONSENT -->
       <div class="consent">
-        <label><input type="checkbox" required> I consent to be contacted.</label>
+        <label>
+          <input type="checkbox" required>
+          By clicking “Submit Free Claim Review”, I expressly consent to be contacted by
+          Nexify Business Solutions and its partners via phone calls, text messages,
+          emails, or prerecorded messages, including through automated dialing systems,
+          even if my number is on a Do Not Call list. Consent is not a condition of purchase.
+        </label>
       </div>
- 
+
       <button type="submit">Submit Free Claim Review</button>
     </form>
- 
+
     <div id="successMessage">
-      <h2>✅ Submission Successful</h2>
-      <p>Thank you. Our team will contact you shortly.</p>
+      ✅ Thank you! Your claim has been submitted successfully.
     </div>
- 
+
+    <!-- NON-LAW FIRM DISCLAIMER -->
+    <p style="font-size:13px;color:#aaa;line-height:1.6;margin-top:25px;">
+      Nexify Business Solutions is not a law firm and does not provide legal advice.
+      Submission of information does not create an attorney-client relationship.
+      Eligibility for compensation is not guaranteed.
+    </p>
+
   </div>
 </section>
- 
+
 <footer>
   <p><strong>Nexify Business Solutions</strong></p>
-  <p>Email: info@nexifyclaims.online | Phone: +1 6615169065</p>
-  <p>© 2026 Nexify Business Solutions. Not a law firm.</p>
+
+  <p>
+    Nexify Business Solutions is not a law firm and does not provide legal advice.
+    We are a legal marketing and information service that connects consumers with
+    attorneys or legal professionals when appropriate.
+  </p>
+
+  <p>
+    Submitting information does not create an attorney-client relationship.
+    Results may vary. Prior outcomes do not guarantee similar results.
+  </p>
+
+  <p>
+    Contact: info@nexifyclaims.online | +1 661-516-9065
+  </p>
+
+  <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
- 
+
 <script>
 document.getElementById("claimForm").addEventListener("submit", function(e){
   e.preventDefault();
- 
-  fetch(this.action, {
+
+  fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec", {
     method: "POST",
     mode: "no-cors",
     body: new FormData(this)
   });
- 
+
   this.style.display = "none";
   document.getElementById("successMessage").style.display = "block";
 });
 </script>
- 
+
 </body>
 </html>
