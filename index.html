@@ -151,7 +151,7 @@ document.getElementById("claimForm").addEventListener("submit",function(e){
   document.getElementById("time_spent").value =
     Math.floor((Date.now()-formLoadedAt)/1000);
 
-  fetch("https://script.google.com/macros/s/AKfycby7KVIVvOiTxoiD-_dEankD9VdI9tbsIUqtKoEqciI3-O8Vkzp0z3--tYxhCQ1lj5rszw/exec",{
+  fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec",{
     method:"POST",
     body:new FormData(this)
   });
