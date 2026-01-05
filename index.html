@@ -5,190 +5,45 @@
 <title>Nexify Business Solutions – Free Claim Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- OFFICIAL TRUSTEDFORM SCRIPT -->
+<!-- TrustedForm -->
 <script>
 (function() {
   var tf = document.createElement('script');
-  tf.type = 'text/javascript';
   tf.async = true;
-  tf.src =
-    'https://api.trustedform.com/trustedform.js?field=trustedform_cert_url&ping_field=trustedform_ping_url';
+  tf.src = 'https://api.trustedform.com/trustedform.js?field=trustedform_cert_url&ping_field=trustedform_ping_url';
   document.head.appendChild(tf);
 })();
 </script>
 
+<!-- Time on page -->
+<script>
+let formLoadedAt = Date.now();
+</script>
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #e5e5e5;
-}
-
-/* HEADER */
-header {
-  background: #0e0e0e;
-  padding: 18px 40px;
-  border-bottom: 1px solid #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  font-size: 22px;
-  font-weight: 700;
-  color: #f5f5f5;
-}
-
-.contact-top {
-  font-size: 13px;
-  color: #c8a96a;
-}
-
-/* HERO */
-.hero {
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 780px;
-  margin: auto;
-  color: #cfcfcf;
-}
-
-.hero a {
-  margin-top: 30px;
-  display: inline-block;
-  background: #c8a96a;
-  color: #111;
-  padding: 14px 36px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-/* SECTION */
-.section {
-  max-width: 1150px;
-  margin: 90px auto;
-  padding: 0 20px;
-}
-
-.section h2 {
-  font-size: 30px;
-  margin-bottom: 40px;
-}
-
-/* TORTS */
-.torts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 22px;
-}
-
-.tort-card {
-  background: #161616;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #262626;
-}
-
-.tort-img {
-  height: 150px;
-  overflow: hidden;
-}
-
-.tort-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tort-card h3 {
-  margin: 0;
-  padding: 14px;
-  text-align: center;
-  background: #121212;
-}
-
-/* FORM SECTION */
-.form-section {
-  background:
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-    url("https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg");
-  background-size: cover;
-  padding: 100px 20px;
-}
-
-.form-box {
-  max-width: 850px;
-  margin: auto;
-  background: #141414;
-  padding: 48px;
-  border-radius: 12px;
-  border: 1px solid #2a2a2a;
-}
-
-label {
-  display: block;
-  margin-top: 16px;
-}
-
-input, select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  background: #1c1c1c;
-  border: 1px solid #333;
-  color: #fff;
-}
-
-button {
-  width: 100%;
-  margin-top: 30px;
-  padding: 15px;
-  background: #c8a96a;
-  color: #111;
-  font-weight: 700;
-  border: none;
-}
-
-.consent {
-  font-size: 13px;
-  margin-top: 16px;
-  color: #bbb;
-}
-
-/* SUCCESS MESSAGE */
-#successMessage {
-  display: none;
-  text-align: center;
-  padding: 40px;
-  color: #c8a96a;
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  background: #0b0b0b;
-  color: #aaa;
-  padding: 50px 20px;
-  text-align: center;
-  font-size: 13px;
-}
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#e5e5e5}
+header{background:#0e0e0e;padding:18px 40px;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:22px;font-weight:700}
+.contact-top{font-size:13px;color:#c8a96a}
+.hero{background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),url("https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg");background-size:cover;padding:120px 20px;text-align:center}
+.hero h1{font-size:44px;margin-bottom:12px}
+.hero p{font-size:18px;max-width:780px;margin:auto;color:#cfcfcf}
+.hero a{margin-top:30px;display:inline-block;background:#c8a96a;color:#111;padding:14px 36px;border-radius:4px;text-decoration:none;font-weight:700}
+.section{max-width:1150px;margin:90px auto;padding:0 20px}
+.section h2{font-size:30px;margin-bottom:40px}
+.torts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.tort-card{background:#161616;border-radius:14px;overflow:hidden;border:1px solid #262626}
+.tort-img{height:150px;overflow:hidden}
+.tort-img img{width:100%;height:100%;object-fit:cover}
+.tort-card h3{margin:0;padding:14px;text-align:center;background:#121212}
+.form-section{background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),url("https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg");background-size:cover;padding:100px 20px}
+.form-box{max-width:850px;margin:auto;background:#141414;padding:48px;border-radius:12px;border:1px solid #2a2a2a}
+label{display:block;margin-top:16px}
+input,select{width:100%;padding:12px;margin-top:6px;background:#1c1c1c;border:1px solid #333;color:#fff}
+button{width:100%;margin-top:30px;padding:15px;background:#c8a96a;color:#111;font-weight:700;border:none}
+.consent{font-size:13px;margin-top:16px;color:#bbb}
+#successMessage{display:none;text-align:center;color:#c8a96a;font-size:20px}
+footer{background:#0b0b0b;color:#aaa;padding:50px 20px;text-align:center;font-size:13px}
 </style>
 </head>
 
@@ -218,77 +73,91 @@ footer {
 <section id="apply" class="form-section">
   <div class="form-box">
 
-    <form id="claimForm">
-      <!-- TRUSTEDFORM REQUIRED FIELDS -->
-      <input type="hidden" name="trustedform_cert_url" id="trustedform_cert_url">
-      <input type="hidden" name="trustedform_ping_url" id="trustedform_ping_url">
+<form id="claimForm">
 
-      <label>Full Name</label>
-      <input type="text" name="name" required>
+<!-- TrustedForm -->
+<input type="hidden" name="trustedform_cert_url" id="trustedform_cert_url">
+<input type="hidden" name="trustedform_ping_url" id="trustedform_ping_url">
 
-      <label>Phone Number</label>
-      <input type="tel" name="phone" required>
+<!-- Fraud Protection -->
+<input type="hidden" name="time_spent" id="time_spent">
+<input type="hidden" name="ip">
 
-      <label>Email Address</label>
-      <input type="email" name="email" required>
+<!-- Honeypot -->
+<div style="display:none">
+  <input type="text" name="website_check">
+</div>
 
-      <label>Type of Claim</label>
-      <select name="claim" required>
-        <option value="">Select a claim</option>
-        <option>Camp Lejeune</option>
-        <option>AFFF Firefighting Foam</option>
-        <option>Roundup</option>
-        <option>Talcum Powder</option>
-        <option>Hair Relaxer</option>
-        <option>Zantac</option>
-        <option>NEC Baby Formula</option>
-        <option>Rideshare Assault Claims</option>
-        <option>Roblox Case</option>
-      </select>
+<label>Full Name</label>
+<input type="text" name="name" required>
 
-      <!-- TCPA CONSENT -->
-      <div class="consent">
-        <label>
-          <input type="checkbox" required>
-          By submitting this form, I consent to be contacted by Nexify Business Solutions
-          and its partners via phone, SMS, email, or automated systems.
-          Consent is not a condition of purchase.
-        </label>
-      </div>
+<label>Phone Number</label>
+<input type="tel" name="phone" required>
 
-      <button type="submit">Submit Free Claim Review</button>
-    </form>
+<label>Email Address</label>
+<input type="email" name="email" required>
 
-    <div id="successMessage">
-      ✅ Thank you! Your claim has been submitted successfully.
-    </div>
+<label>Type of Claim</label>
+<select name="claim" required>
+<option value="">Select a claim</option>
+<option>Camp Lejeune</option>
+<option>AFFF Firefighting Foam</option>
+<option>Roundup</option>
+<option>Talcum Powder</option>
+<option>Hair Relaxer</option>
+<option>Zantac</option>
+<option>NEC Baby Formula</option>
+<option>Rideshare Assault Claims</option>
+</select>
 
-    <p style="font-size:13px;color:#aaa;margin-top:25px;">
-      Nexify Business Solutions is not a law firm and does not provide legal advice.
-      Submission of information does not create an attorney-client relationship.
-    </p>
+<div class="consent">
+<label>
+<input type="checkbox" required>
+By submitting this form, you consent to be contacted by Nexify Business Solutions.
+This is a free claim review and not legal advice.
+</label>
+</div>
 
-  </div>
+<button type="submit">Submit Free Claim Review</button>
+</form>
+
+<div id="successMessage">
+✅ Thank you. Your claim has been submitted successfully.
+</div>
+
+<p style="font-size:12px;color:#aaa;margin-top:14px">
+Nexify Business Solutions is not a law firm and does not provide legal advice.
+</p>
+
+</div>
 </section>
 
 <footer>
-  <p><strong>Nexify Business Solutions</strong></p>
-  <p>Email: info@nexifyclaims.online | Phone: +1 661-516-9065</p>
-  <p>© 2026 Nexify Business Solutions. All rights reserved.</p>
+<p><strong>Nexify Business Solutions</strong></p>
+<p>Email: info@nexifyclaims.online | Phone: +1 661-516-9065</p>
+<p>© 2026 Nexify Business Solutions. All rights reserved.</p>
 </footer>
 
 <script>
-document.getElementById("claimForm").addEventListener("submit", function(e){
-  e.preventDefault();
+fetch('https://ipapi.co/json/')
+.then(res=>res.json())
+.then(data=>{
+  document.querySelector('input[name="ip"]').value =
+    data.ip + " | " + data.country_name;
+});
 
-  fetch("https://script.google.com/macros/s/AKfycbwm-s3Czf2ij1gxEEX7ZDs9Lv7QNxsy3Ud4GdeKCLXgsb2uZivLGiRC1fHKdYyDod7MEg/exec", {
-    method: "POST",
-    mode: "no-cors",
-    body: new FormData(this)
+document.getElementById("claimForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  document.getElementById("time_spent").value =
+    Math.floor((Date.now()-formLoadedAt)/1000);
+
+  fetch("https://script.google.com/macros/s/AKfycby7KVIVvOiTxoiD-_dEankD9VdI9tbsIUqtKoEqciI3-O8Vkzp0z3--tYxhCQ1lj5rszw/exec",{
+    method:"POST",
+    body:new FormData(this)
   });
 
-  this.style.display = "none";
-  document.getElementById("successMessage").style.display = "block";
+  this.style.display="none";
+  document.getElementById("successMessage").style.display="block";
 });
 </script>
 
